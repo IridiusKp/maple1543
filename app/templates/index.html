@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/default.css">
+    <title>Главная</title>
+</head>
+
+<body>
+    <header>
+        <div class="containerNav">
+            <img class="logoNav" src="../static/img/nav_leaf_green.png">
+
+            <a href="/index" class="clickedLink">Главная</a>
+            <a href="/homework" class="link">Задания</a>
+            <a href="#" class="link">Расписание</a>
+            <a href="#" class="link">Класс</a>
+
+            <a href="#" class="Login">Войти</a>
+        </div>
+    </header>
+
+    <div class="ghost"></div>
+
+    {% if isBeta %}
+    <div class="warningPlate">
+        <img class="warn" src="../static/img/warning_develop.png">
+        <p class="warnText">Внимание! Сайт находится в стадии разработки!</p>
+    </div>
+    {% endif %}
+
+    <div class="main">
+        <h1>Главная страница</h1>
+        <div class="greenLine"></div>
+
+        <div class="subMain">
+            <h2>Новости</h2>
+            <div class="whiteLine"></div>
+
+            {% for row in table %}
+            <div class="valueMain">
+                <h3><b>#{{row[0]}}</b> - {{row[1]}} - {{row[2]}}</h3>
+                <div class="q">{{row[3]}}</div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</body>
+</html>

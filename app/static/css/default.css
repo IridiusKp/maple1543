@@ -1,0 +1,208 @@
+/* main css --------------------------------------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'Antipasto Demi Bold';
+    src: url('../fonts/AntipastoPro DemiBold.ttf');
+}
+
+body {
+    background: #292929;
+    font-family: 'Antipasto Demi Bold', serif;
+    margin: 0 0 0 0;
+}
+
+p {
+    margin: 0 0 0 0;
+    color: white;
+}
+
+a {
+    margin: -4px 0 0 0;
+    padding: 0;
+}
+
+
+/* header css ------------------------------------------------------------------------------------------------------- */
+/* divs */
+header {
+    background: #5A5A5A;
+    height: 64px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 0 3px 3px 0px rgb(0 0 0 / 50%);
+}
+
+.ghost {
+    height: 64px;
+    width: 100%;
+}
+
+.containerNav {
+    align-items: center;
+    display: flex;
+    margin: 0 64px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+/* links */
+.logoNav {
+    width: 48px;
+    height: 48px;
+}
+
+.link {
+    font-size: 24px;
+    padding-left: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.1s linear;
+}
+
+.link:hover {
+    color: #caffdd;
+    transition: 0.1s linear;
+}
+
+.clickedLink {
+    font-size: 24px;
+    padding-left: 24px;
+    color: #95ffb9;
+    text-decoration: none;
+    transition: 0.1s linear;
+}
+
+.clickedLink:hover {
+    color: #caffdd;
+    transition: 0.1s linear;
+}
+
+
+/* buttons */
+.Login {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.1s linear;
+    padding: 4px 8px 8px 8px;
+    background: #383838;
+    border-radius: 8px;
+    margin-left: auto;
+}
+
+.Login:hover {
+    color: #caffdd;
+    background: #2d2d2d;
+}
+
+
+/* Warning plate ---------------------------------------------------------------------------------------------------- */
+/* divs css */
+.warningPlate {
+    margin: 16px 64px 0 64px;
+    background: #FFF495;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    border-radius: 16px;
+}
+
+
+/* text css */
+img.warn {
+    width: 32px;
+    height: 32px;
+    margin: 0 16px;
+}
+
+p.warnText {
+    font-size: 24px;
+    color: #5A5A5A;
+}
+
+
+/* main ------------------------------------------------------------------------------------------------------------- */
+/* divs css */
+div.main {
+    background: #5A5A5A;
+    margin: 16px 64px 16px 64px;
+    border-radius: 16px;
+    padding: 16px 16px 16px 16px;
+}
+
+div.subMain {
+    background: #414141;
+    margin: 16px 0 0 0;
+    border-radius: 12px;
+    padding: 16px 16px 16px 16px;
+}
+
+div.valueMain {
+    background: #292929;
+    margin: 8px 0 0 0;
+    border-radius: 8px;
+    padding: 16px 16px 16px 16px;
+}
+
+/* text css */
+h1 {
+    font-size: 32px;
+    color: #95FFB9;
+    margin: -10px 0 0 0;
+}
+
+h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin: -10px 0 0 0;
+}
+
+h3 {
+    color: #DAFFE7FF;
+    margin: -10px 0 0 0;
+    font-size: 24px;
+    font-style: inherit;
+}
+
+div.q {
+    position: relative;
+    padding-left: 8px;
+    color: white;
+    font-size: 18px;
+}
+
+div.q::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    width: 2px;
+    height: 100%;
+    background-color: #DAFFE7FF;
+}
+
+/* decorators css */
+div.greenLine {
+    width: 512px;
+    height: 2px;
+    border-radius: 100px 100px 100px 100px;
+    background: #95FFB9;
+    margin: 8px 0 0 0;
+}
+
+div.whiteLine {
+    width: 256px;
+    height: 2px;
+    border-radius: 100px 100px 100px 100px;
+    background: #ffffff;
+    margin: 4px 0 0 0;
+}

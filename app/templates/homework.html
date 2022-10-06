@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/default.css">
+    <title>Задания</title>
+</head>
+
+<body>
+    <header>
+        <div class="containerNav">
+            <img class="logoNav" src="../static/img/nav_leaf_green.png">
+
+            <a href="/index" class="link">Главная</a>
+            <a href="/homework" class="clickedLink">Задания</a>
+            <a href="#" class="link">Расписание</a>
+            <a href="#" class="link">Класс</a>
+
+            <a href="#" class="Login">Войти</a>
+        </div>
+    </header>
+
+    <div class="ghost"></div>
+
+    {% if isBeta %}
+    <div class="warningPlate">
+        <img class="warn" src="../static/img/warning_develop.png">
+        <p class="warnText">Внимание! Сайт находится в стадии разработки!</p>
+    </div>
+    {% endif %}
+
+    <div class="main">
+        <h1>Задания</h1>
+        <div class="greenLine"></div>
+
+        {% for date in sortedDays %}
+        <div class="subMain">
+            <h2>Задания на {{date}}</h2>
+            <div class="whiteLine"></div>
+
+            {% for i in range(table[date]|length) %}
+            <div class="valueMain">
+                <h3>#{{table[date][i][0]}} - {{table[date][i][1]}}</h3>
+                <div class="q">{{table[date][i][2]}}</div>
+            </div>
+            {% endfor %}
+
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+</html>
